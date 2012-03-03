@@ -12,8 +12,8 @@ type Bitvector struct {
 }
 
 // Construct the vector with length len, capacity  and fill with the value b
-func New(length, capacity int) Bitvector {
-	return Bitvector{ make([]uint8, size(length), size(capacity)), length }
+func New(length, capacity int) *Bitvector {
+	return &Bitvector{ make([]uint8, size(length), size(capacity)), length }
 }
 
 // Get the i'th element
