@@ -17,7 +17,7 @@ func New(length, capacity int) Bitvector {
 }
 
 // Get the i'th element
-func (b Bitvector) Get(i int) bool {
+func (b Bitvector) At(i int) bool {
 	b.checkLength(i)
 	return (b.data[i >> shift] & (1<< uint8(i & mask))) != 0
 }
