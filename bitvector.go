@@ -59,8 +59,8 @@ func size(length int) int {
 }
 
 func (b Bitvector) checkLength(i int) {
-/*	if i < 0 || i >= b.length {
+	if i < 0 || i >= b.length {
 		panic("bitvector index out of range")
-	}*/
+	}
 }
 */
