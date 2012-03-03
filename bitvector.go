@@ -1,6 +1,24 @@
 package bitvector
 
-const (
+type Bitvector []uint8
+
+func New(length, capacity int) Bitvector {
+	return make([]uint8, length, capacity)
+}
+
+func (b Bitvector) At(i int) bool {
+	return b[i] != 0
+}
+
+func (b Bitvector) Set(i int, val bool) {
+	if val {
+		b[i] = 1
+	} else {
+		b[i] = 0
+	}
+}
+
+/*const (
 	width = 8
 	shift = 3
 	mask = 0x7
@@ -45,3 +63,4 @@ func (b Bitvector) checkLength(i int) {
 		panic("bitvector index out of range")
 	}*/
 }
+*/
